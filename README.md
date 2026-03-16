@@ -36,12 +36,12 @@ Lưu ý: Không commit file `.env` (đã được ignore trong `.gitignore`).
 
 ---
 
-## 3. Chạy single node (`docker-compose.yml`)
+## 3. Chạy single node (`docker-compose-single-node.yml`)
 
 ### 3.1. Khởi động
 
 ```bash
-docker compose -f docker-compose.yml up -d
+docker compose -f docker-compose-single-node.yml up -d
 ```
 
 Compose sẽ:
@@ -55,7 +55,7 @@ Compose sẽ:
 - Kiểm tra health:
 
 ```bash
-docker compose -f docker-compose.yml ps
+docker compose -f docker-compose-single-node.yml ps
 ```
 
 - Test Elasticsearch:
@@ -75,13 +75,13 @@ http://localhost:${KIBANA_PORT}
 ### 3.3. Dừng & xóa container
 
 ```bash
-docker compose -f docker-compose.yml down
+docker compose -f docker-compose-single-node.yml down
 ```
 
 Nếu muốn xóa kèm volume data:
 
 ```bash
-docker compose -f docker-compose.yml down -v
+docker compose -f docker-compose-single-node.yml down -v
 ```
 
 ---
