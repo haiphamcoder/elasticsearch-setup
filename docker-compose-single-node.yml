@@ -52,7 +52,7 @@ services:
       timeout: 5s
       retries: 120
     networks:
-      - elasticsearch-network
+      - elasticsearch-single-node-network
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
@@ -96,7 +96,7 @@ services:
       timeout: 10s
       retries: 120
     networks:
-      - elasticsearch-network
+      - elasticsearch-single-node-network
 
   kibana:
     image: docker.elastic.co/kibana/kibana:${STACK_VERSION}
@@ -125,7 +125,7 @@ services:
       timeout: 10s
       retries: 120
     networks:
-      - elasticsearch-network
+      - elasticsearch-single-node-network
 
 volumes:
   certs:
@@ -139,5 +139,5 @@ volumes:
     driver: local
 
 networks:
-  elasticsearch-network:
+  elasticsearch-single-node-network:
     driver: bridge
