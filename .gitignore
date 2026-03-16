@@ -1,0 +1,45 @@
+### Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+### Editor / IDE
+.vscode/
+.idea/
+*.code-workspace
+
+### Node / tooling
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+### Python / virtual env (phòng trường hợp dùng script)
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+### Docker / runtime
+*.pid
+*.log
+logs/
+
+### Elasticsearch & Kibana data (docker volumes thường không nằm trong repo,
+### nhưng nếu bạn mount ra thư mục host thì nên ignore)
+elasticsearch-data/
+elasticsearch-data-01/
+elasticsearch-data-02/
+elasticsearch-data-03/
+kibana-data/
+
+### Certificates (nếu sinh ra trên host)
+certs/
+config/certs/
+
+### Cursor / editor metadata
+.cursor/
+.DS_Store
